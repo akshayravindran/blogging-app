@@ -1,0 +1,21 @@
+.myfooter {
+    height: 8vh;
+    width: 100%;
+    padding: 12px;
+}
+
+.myfooter div {
+    font-size: 10px;
+}
+
+@media(min-width: 411px) {
+    .myfooter div {
+        font-size: 13px;
+    }
+}
+
+@media(min-width: 768px) {
+    .myfooter div {
+        font-size: 15px;
+    }
+}

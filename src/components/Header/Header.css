@@ -1,0 +1,12 @@
+.myheader {
+    min-height: 10vh;
+    width: 100%;
+}
+
+.headerLinks {
+    display: none;
+}
+
+#togglerBtn {
+    display: none;
+}

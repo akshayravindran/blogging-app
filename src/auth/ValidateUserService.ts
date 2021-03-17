@@ -1,20 +1,19 @@
 import axios from "axios"
 
-export function ValidateUser(email: string) {
-    let flag: boolean = false
+export async function ValidateUser(email: string) {
     let users: any = []
+    let authFlag: boolean = false
 
-    axios.get('https://jsonplaceholder.typicode.com/users')
-        .then(response => users = response.data)
+    await axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(async response => users = await response.data)
         .catch(() => alert("Sorry! Some internal error occurred!"));
 
-    users.forEach((item: any) => {
-        if (item.email.toLowerCase() === email) {
-            flag = true
-            // localStorage.setItem('logText', JSON.stringify("Logout"))
-            // document.getElementById('logText').innerHTML = JSON.parse(localStorage.getItem('logText'))
-            return flag
+    await users.forEach((user: any) => {
+        if (user.email.toLowerCase() === email) {
+            authFlag = true
+            localStorage.setItem('blogAppUser', JSON.stringify(user))
         }
     })
-    return flag;
+
+    return authFlag
 }

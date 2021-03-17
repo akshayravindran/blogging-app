@@ -1,0 +1,47 @@
+#notFoundContainer {
+    min-height: 80vh;
+}
+
+#notFoundImage {
+    width: 70%;
+    height: 40vh;
+    margin: auto auto;
+}
+
+@media(min-width: 0px){
+    #notFoundImage {
+        width: 60%;
+        height: 30vh;
+    }
+}
+
+@media(min-width: 330px){
+    #notFoundImage {
+        height: 40vh;
+    }
+}
+
+@media(min-width: 610px){
+    #notFoundImage {
+        height: 50vh;
+    }
+}
+
+@media(min-width: 768px){
+    #notFoundImage {
+        height: 60vh;
+    }
+}
+
+@media(min-width: 768px){
+    #notFoundImage {
+        width: 45%;
+    }
+}
+
+@media(min-width: 992px){
+    #notFoundImage {
+        height: 80vh;
+        width: 55%;
+    }
+}

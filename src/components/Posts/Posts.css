@@ -1,0 +1,29 @@
+#noPostsContainer {
+    min-height: 82vh;
+}
+
+#noPostsInfo {
+    font-size: 15px;
+}
+
+#postsContainer {
+    min-height: 82vh;
+}
+
+@media(min-width: 411px) {
+    #noPostsInfo {
+        font-size: 23px;
+    }
+}
+
+@media(min-width: 768px) {
+    #noPostsInfo {
+        font-size: 35px;
+    }
+}
+
+@media(min-width: 992px) {
+    #noPostsInfo {
+        font-size: 50px;
+    }
+}
