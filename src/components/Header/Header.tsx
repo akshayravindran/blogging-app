@@ -31,6 +31,9 @@ export const Header: React.FC<Props> = ({ title }) => {
 
     const LogoutHandler = () => {
         localStorage.setItem('blogAppToken', JSON.stringify(null))
+        localStorage.setItem('blogAppUser', JSON.stringify(null))
+        localStorage.setItem('blogAppPostId', JSON.stringify(null))
+        localStorage.setItem('blogAppAlbumId', JSON.stringify(null))
         let link = document.getElementById('postsLink')
         if (link) link.style.display = "none"
         link = document.getElementById('albumsLink')

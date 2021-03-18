@@ -1,0 +1,29 @@
+#noPhotosContainer {
+    min-height: 82vh;
+}
+
+#noPhotosInfo {
+    font-size: 15px;
+}
+
+#photosContainer {
+    min-height: 82vh;
+}
+
+@media(min-width: 411px) {
+    #noPhotosInfo {
+        font-size: 23px;
+    }
+}
+
+@media(min-width: 768px) {
+    #noPhotosInfo {
+        font-size: 35px;
+    }
+}
+
+@media(min-width: 992px) {
+    #noPhotosInfo {
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,29 @@
+#noCommentsContainer {
+    min-height: 82vh;
+}
+
+#noCommentsInfo {
+    font-size: 15px;
+}
+
+#commentsContainer {
+    min-height: 82vh;
+}
+
+@media(min-width: 411px) {
+    #noCommentsInfo {
+        font-size: 23px;
+    }
+}
+
+@media(min-width: 768px) {
+    #noCommentsInfo {
+        font-size: 35px;
+    }
+}
+
+@media(min-width: 992px) {
+    #noCommentsInfo {
+        font-size: 50px;
+    }
+}

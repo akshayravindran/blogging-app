@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router'
 import './Posts.css'
 
 interface Post {
@@ -11,13 +12,21 @@ interface Post {
 
 export const Posts: React.FC = () => {
     const [posts, setPosts] = useState<Post[]>([])
+    const history = useHistory()
 
     useEffect(() => {
         const userId = JSON.parse(localStorage.getItem('blogAppUser') as string).id
         axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
             .then(response => setPosts(response.data))
             .catch(() => alert("Sorry! Some internal error occurred!"))
+        localStorage.setItem('blogAppPostId', JSON.stringify(null))
+        localStorage.setItem('blogAppAlbumId', JSON.stringify(null))
     }, [])
+
+    const ShowCommentsHandler = (postId: number) => {
+        localStorage.setItem('blogAppPostId', JSON.stringify(postId))
+        history.push("/posts/comments")
+    }
 
     const PostsContent = () => {
         if (posts.length === 0) {
@@ -41,7 +50,7 @@ export const Posts: React.FC = () => {
                             <hr />
                         </div>
                         <div className="d-flex bg-light">
-                            <button id={"postBtn" + post.id} className="btn btn-dark mb-3 mx-auto">
+                            <button id={"postBtn" + post.id} className="btn btn-dark mb-3 mx-auto" onClick={() => ShowCommentsHandler(post.id)}>
                                 Show Comments
                             </button>
                         </div>

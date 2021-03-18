@@ -1,0 +1,29 @@
+#noAlbumsContainer {
+    min-height: 82vh;
+}
+
+#noAlbumsInfo {
+    font-size: 15px;
+}
+
+#albumsContainer {
+    min-height: 82vh;
+}
+
+@media(min-width: 411px) {
+    #noAlbumsInfo {
+        font-size: 23px;
+    }
+}
+
+@media(min-width: 768px) {
+    #noAlbumsInfo {
+        font-size: 35px;
+    }
+}
+
+@media(min-width: 992px) {
+    #noAlbumsInfo {
+        font-size: 50px;
+    }
+}
